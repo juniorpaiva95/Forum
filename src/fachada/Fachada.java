@@ -1,25 +1,34 @@
 package fachada;
-import java.sql.Time;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Timer;
 
-import javax.persistence.NoResultException;
-
-import daojpa.DAO;
 import daojpa.*;
 import modelo.*;
+import util.Utilitaries;
 
 public class Fachada {
-	
+	private static DAOUsuario daousuario = new DAOUsuario();
 	public static void inicializar(){
 		DAO.abrir();
 	}
 	
 	public static void finalizar(){
 		DAO.fechar();
+	}
+	
+	public static Usuario cadastrarUsuario(String nome, String email, String senha) 
+			throws  Exception{
+		DAO.abrir();
+		DAO.iniciar();
+//		String md5Pass = 
+		Usuario u = daousuario.localilzarPeloEmail(email);
+		if(u != null) {
+			DAO.cancelar();
+			throw new Exception("Usuário ja cadastrado: " + nome);
+		}
+		u = new Usuario(email,nome,Utilitaries.makeMd5("123456"));
+		daousuario.persistir(u);
+		
+		DAO.efetivar();
+		DAO.fechar();
+		return u;
 	}
 }

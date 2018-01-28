@@ -12,6 +12,7 @@ import javax.persistence.Query;
 import daojpa.*;
 import fachada.Fachada;
 import modelo.*;
+import util.Utilitaries;
 
 public class TesteAplicacao {
 	protected static EntityManager manager;
@@ -21,12 +22,12 @@ public class TesteAplicacao {
 		
 		Fachada.inicializar();
 		try { 
-			
+			System.out.println("Inicializando o sistema");
+			Fachada.cadastrarUsuario("Junior","juniorpaiva3@hotmail.com","123456");
 		} catch (Exception e) {
-			System.out.println("OI");
 			System.out.println(e.getMessage());
 		}
-		
+		Fachada.finalizar();
 	}
 
 }

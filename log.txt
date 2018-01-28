@@ -1,25 +1,30 @@
-[EL Fine]: server: 2018-01-28 01:31:36.096--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2018-01-28 01:31:36.286--ServerSession(1179381257)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Model] is set to [FIELD].
-[EL Config]: metadata: 2018-01-28 01:31:36.314--ServerSession(1179381257)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
-[EL Config]: metadata: 2018-01-28 01:31:36.322--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
-[EL Config]: metadata: 2018-01-28 01:31:36.325--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
-[EL Config]: metadata: 2018-01-28 01:31:36.325--ServerSession(1179381257)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
-[EL Config]: metadata: 2018-01-28 01:31:36.326--ServerSession(1179381257)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
-[EL Config]: metadata: 2018-01-28 01:31:36.353--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [senha] is being defaulted to: SENHA.
-[EL Config]: metadata: 2018-01-28 01:31:36.353--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
-[EL Config]: metadata: 2018-01-28 01:31:36.356--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
-[EL Config]: metadata: 2018-01-28 01:31:36.356--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-01-28 01:31:36.357--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-01-28 01:31:36.358--ServerSession(1179381257)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
-[EL Info]: 2018-01-28 01:31:36.959--ServerSession(1179381257)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
-[EL Fine]: connection: 2018-01-28 01:31:37.299--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
-[EL Config]: connection: 2018-01-28 01:31:37.316--ServerSession(1179381257)--Connection(767764251)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+[EL Fine]: server: 2018-01-28 04:59:51.343--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2018-01-28 04:59:51.445--ServerSession(1007603019)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Model] is set to [FIELD].
+[EL Config]: metadata: 2018-01-28 04:59:51.46--ServerSession(1007603019)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
+[EL Config]: metadata: 2018-01-28 04:59:51.465--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-01-28 04:59:51.467--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-01-28 04:59:51.467--ServerSession(1007603019)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
+[EL Config]: metadata: 2018-01-28 04:59:51.468--ServerSession(1007603019)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2018-01-28 04:59:51.475--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [senha] is being defaulted to: SENHA.
+[EL Config]: metadata: 2018-01-28 04:59:51.476--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-01-28 04:59:51.476--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-01-28 04:59:51.476--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-01-28 04:59:51.476--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-01-28 04:59:51.476--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Info]: 2018-01-28 04:59:51.84--ServerSession(1007603019)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
+[EL Fine]: connection: 2018-01-28 04:59:52.043--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: connection: 2018-01-28 04:59:52.049--ServerSession(1007603019)--Connection(909918801)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
 	platform=>MySQLPlatform
 	user name=> "root"
 	datasource URL=> "jdbc:mysql://127.0.0.1:3306/teste"
 ))
-[EL Config]: connection: 2018-01-28 01:31:37.326--ServerSession(1179381257)--Connection(1184974266)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://127.0.0.1:3306/teste
+[EL Config]: connection: 2018-01-28 04:59:52.054--ServerSession(1007603019)--Connection(1254850252)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://127.0.0.1:3306/teste
 	User: root@localhost
 	Database: MySQL  Version: 5.7.21-log
 	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )
-[EL Info]: connection: 2018-01-28 01:31:37.404--ServerSession(1179381257)--Thread(Thread[main,5,main])--/file:/C:/Users/Pichau/workspace/Forum/build/classes/_cinema login successful
+[EL Info]: connection: 2018-01-28 04:59:52.083--ServerSession(1007603019)--Thread(Thread[main,5,main])--/file:/C:/Users/Pichau/workspace/Forum/build/classes/_teste login successful
+[EL Fine]: sql: 2018-01-28 04:59:52.233--ServerSession(1007603019)--Connection(1254850252)--Thread(Thread[main,5,main])--SELECT ID, CREATED_AT, EMAIL, NOME, SENHA, UPDATED_AT FROM USUARIO WHERE (EMAIL = ?)
+	bind => [juniorpaiva3@hotmail.com]
+[EL Fine]: sql: 2018-01-28 04:59:52.268--ClientSession(1592415783)--Connection(1254850252)--Thread(Thread[main,5,main])--INSERT INTO USUARIO (CREATED_AT, EMAIL, NOME, SENHA, UPDATED_AT) VALUES (?, ?, ?, ?, ?)
+	bind => [2018-01-28 04:59:52.236, juniorpaiva3@hotmail.com, Junior, e10adc3949ba59abbe56e057f20f883e, 2018-01-28 04:59:52.236]
+[EL Fine]: sql: 2018-01-28 04:59:52.271--ClientSession(1592415783)--Connection(1254850252)--Thread(Thread[main,5,main])--SELECT LAST_INSERT_ID()

@@ -37,7 +37,7 @@ public class DAO<T> implements DAOInterface<T> {
 //			properties.put(PersistenceUnitProperties.LOGGING_FILE, "log.txt");
 
 			EntityManagerFactory factory = 
-					Persistence.createEntityManagerFactory("cinema", properties);
+					Persistence.createEntityManagerFactory("teste", properties);
 			manager = factory.createEntityManager();
 		}
 	}
