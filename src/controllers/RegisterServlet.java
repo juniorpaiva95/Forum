@@ -5,11 +5,15 @@ import java.io.IOException;
 import javax.persistence.NoResultException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import daojpa.DAO;
 import fachada.Fachada;
+import modelo.Usuario;
 
 /**
  * Servlet implementation class RegisterServlet
@@ -39,22 +43,23 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("Oi, tou recebendo o post do form!!");
 		String nome = req.getParameter("nome");
 		String email = req.getParameter("email");
 		String senha = req.getParameter("senha");
-		System.out.println("Nome: " + nome + "\nSenha: " + senha + "\nEmail: " + email);
+		HttpSession session = req.getSession(); 
 		try {
-			Fachada.cadastrarUsuario(nome,email,senha);
-			System.out.println("Usuário cadastrado com sucesso!");
+			Fachada.inicializar();
+			Usuario u = Fachada.cadastrarUsuario(nome,email,senha);			
+			if(session.isNew()){
+				session.setAttribute("userLogged", u);
+			}
+			res.addCookie(new Cookie("userLogged", u.getEmail()));
+			Fachada.finalizar();
+			res.sendRedirect("template/dashboard_2.jsp");
 		} 
 		catch (Exception e) {
-			// TODO: handle exception
 			System.out.println(e.getMessage());
 		}
-		
-		
-//		doGet(request, response);
 	}
 
 }

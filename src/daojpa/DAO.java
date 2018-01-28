@@ -27,15 +27,15 @@ public class DAO<T> implements DAOInterface<T> {
 		if(manager==null){
 			//propriedades do persistence.xml  podem ser alteradas		
 			HashMap<String,String> properties = new HashMap<String,String>();		
-//			properties.put(PersistenceUnitProperties.JDBC_DRIVER, "org.postgresql.Driver" );	
-//			properties.put(PersistenceUnitProperties.JDBC_URL, "jdbc:postgresql://localhost:5432/loja");
-//			properties.put(PersistenceUnitProperties.JDBC_USER, "postgres");
-//			properties.put(PersistenceUnitProperties.JDBC_PASSWORD, "ifpb");
+//			properties.put(PersistenceUnitProperties.JDBC_DRIVER, "com.mysql.jdbc.Driver" );	
+//			properties.put(PersistenceUnitProperties.JDBC_URL, "jdbc:mysql://127.0.0.1:3306/teste");
+//			properties.put(PersistenceUnitProperties.JDBC_USER, "root");
+//			properties.put(PersistenceUnitProperties.JDBC_PASSWORD, "root");
 //			properties.put(PersistenceUnitProperties.DDL_GENERATION, "create-tables");
 //			properties.put(PersistenceUnitProperties.DDL_GENERATION_MODE, "database");
 //			properties.put(PersistenceUnitProperties.LOGGING_LEVEL, "off");
 //			properties.put(PersistenceUnitProperties.LOGGING_FILE, "log.txt");
-
+			System.out.println("Oi, vou tentar criar a conexão agora.");
 			EntityManagerFactory factory = 
 					Persistence.createEntityManagerFactory("teste", properties);
 			manager = factory.createEntityManager();

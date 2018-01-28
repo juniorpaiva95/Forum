@@ -16,9 +16,7 @@ public class Fachada {
 	
 	public static Usuario cadastrarUsuario(String nome, String email, String senha) 
 			throws  Exception{
-		DAO.abrir();
 		DAO.iniciar();
-//		String md5Pass = 
 		Usuario u = daousuario.localilzarPeloEmail(email);
 		if(u != null) {
 			DAO.cancelar();
@@ -28,7 +26,6 @@ public class Fachada {
 		daousuario.persistir(u);
 		
 		DAO.efetivar();
-		DAO.fechar();
 		return u;
 	}
 }
