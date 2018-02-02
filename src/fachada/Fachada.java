@@ -20,9 +20,9 @@ public class Fachada {
 		Usuario u = daousuario.localilzarPeloEmail(email);
 		if(u != null) {
 			DAO.cancelar();
-			throw new Exception("Usuário ja cadastrado: " + nome);
+			throw new Exception("Usuï¿½rio ja cadastrado: " + nome);
 		}
-		u = new Usuario(email,nome,Utilitaries.makeMd5("123456"));
+		u = new Usuario(email,nome,Utilitaries.makeMd5(senha));
 		daousuario.persistir(u);
 		
 		DAO.efetivar();

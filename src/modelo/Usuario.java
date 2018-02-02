@@ -1,18 +1,26 @@
 package modelo;
 
+import java.util.ArrayList;
+
 import javax.persistence.*;
 
 @Entity
 public class Usuario extends Model{
 	@Id		
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int iduser;
 	@Column(nullable=false, unique=true)
 	private String email;
 	@Column(nullable=false)
 	private String nome;
 	@Column(nullable=false)
 	private String senha;
+	@ManyToOne
+	@JoinColumn(name = "iduser")
+	private ArrayList<Postagem> postagens;
+	@ManyToOne
+	@JoinColumn(name = "iduser")
+	private ArrayList<Comentario> comentarios;
 	
 	public Usuario() {}
 	
