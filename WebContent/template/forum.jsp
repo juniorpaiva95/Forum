@@ -178,7 +178,7 @@
                             <div class="col-lg-12">
                             	<form>
                             		<div class="form-group">
-                            			<input type="text" class="form-control" placeholder="Consultar por Tema ou Titulo">
+                            			<input type="text" name="q" class="form-control" placeholder="Consultar por Tema ou Titulo">
                             		</div>
                             		<div class="form-group">
                             			<button type="submit" class="btn btn-primary">Consultar</button>
