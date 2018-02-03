@@ -7,7 +7,7 @@ import modelo.Postagem;
 
 public class DAOPostagem extends DAO<Postagem>{
 	
-	public Postagem localilzarPeloId(int id){
+	public Postagem localizarPeloId(int id){
 		try{
 			Query query = manager.createQuery("SELECT p FROM Postagem p WHERE p.id = :id");
 			query.setParameter("id", id);

@@ -73,7 +73,7 @@ public class Fachada {
 	
 	public static Comentario cadastrarComentario(String comentario, Usuario usuario, int idpostagem) throws Exception{
 		DAO.iniciar();
-		Postagem p = daopostagem.localilzarPeloId(idpostagem);
+		Postagem p = daopostagem.localizarPeloId(idpostagem);
 		if(p == null) {
 			throw new Exception("Postagem não localizada!");
 		}
@@ -95,6 +95,14 @@ public class Fachada {
 		try {
 			return (List<Postagem>) daopostagem.listar();
 		} catch (NoResultException e) {
+			return null;
+		}
+	}
+	
+	public static Postagem localizarPostagemPorID(int id) throws Exception {
+		try {
+			return daopostagem.localizarPeloId(id);
+		} catch (Exception e) {
 			return null;
 		}
 	}

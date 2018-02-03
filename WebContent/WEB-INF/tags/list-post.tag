@@ -10,7 +10,7 @@ body-content="empty"%>
 <div class="col-lg-4">
                                   <div class="ibox">
                                     <div class="ibox-content">
-                                      <a href="/Forum/postagem/?title=${ p.getTitulo() }" class="btn-link">
+                                      <a href="/Forum/postagem?id=${ p.getId() }" class="btn-link">
                                         <h2>
                                           <c:out value="${ p.getTitulo() }"></c:out>
                                         </h2>
@@ -31,7 +31,7 @@ body-content="empty"%>
                                           <div class="small text-right">
                                             <h5>Estatísticas:</h5>
                                             <div> <i class="fa fa-comments-o"> </i> <c:out value="${ p.getComentarios().size() }"></c:out> comments </div>
-                                            <i class="fa fa-eye"> </i> 17 views
+                                            <i class="fa fa-eye"> </i> <c:out value="${ p.getViews() }"></c:out> views
                                           </div>
                                         </div>
                                       </div>

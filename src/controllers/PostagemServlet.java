@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
 
+import daojpa.DAO;
 import daojpa.DAOPostagem;
 import fachada.Fachada;
 import modelo.Postagem;
@@ -37,21 +38,35 @@ public class PostagemServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		Fachada.inicializar();
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("TestServlet says hi<br/>");
-
-		String action = request.getParameter("action");
-		if (action != null) {
+		DAOPostagem daopostagem = new DAOPostagem();
+		String id = request.getParameter("id");
+		if (id != null) {
 			RequestDispatcher rd = request.getRequestDispatcher("template/visualizar-postagem.jsp");
-			if ("include".equalsIgnoreCase(action)) {
-				rd.include(request, response);
-			} else if ("forward".equalsIgnoreCase(action)) {
+			Postagem p = daopostagem.localizarPeloId(Integer.parseInt(id));
+			
+			if(p != null) {
+				DAO.iniciar();
+				System.out.println("Postagem: " + p.getTitulo());
+				p.setViews(p.getViews() + 1);
+				daopostagem.atualizar(p);
+				System.out.println("Qtd Views: " + p.getViews());
+				DAO.efetivar();
+				Fachada.finalizar();
 				rd.forward(request, response);
+			}else {
+				response.sendRedirect("/Forum/template/forum.jsp");
 			}
+			
+//			if ("include".equalsIgnoreCase(action)) {
+//				rd.include(request, response);
+//			} else if ("forward".equalsIgnoreCase(action)) {
+//				rd.forward(request, response);
+//			}
+		}else {
+			response.sendRedirect("/Forum/template/forum.jsp");
 		}
-		response.sendRedirect("/Forum/template/forum.jsp");
 		
 //		if(request.getParameter("title") != null) {
 ////			RequestDispatcher despachar = request.getRequestDispatcher(request.getRequestURL() + request.getQueryString());
