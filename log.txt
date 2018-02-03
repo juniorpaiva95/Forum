@@ -1,52 +1,71 @@
-[EL Fine]: server: 2018-02-02 23:02:54.258--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2018-02-02 23:02:54.367--ServerSession(1007603019)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Model] is set to [FIELD].
-[EL Config]: metadata: 2018-02-02 23:02:54.38--ServerSession(1007603019)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Tema] is set to [FIELD].
-[EL Config]: metadata: 2018-02-02 23:02:54.383--ServerSession(1007603019)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Postagem] is set to [FIELD].
-[EL Config]: metadata: 2018-02-02 23:02:54.387--ServerSession(1007603019)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field tema] is being defaulted to: class modelo.Tema.
-[EL Config]: metadata: 2018-02-02 23:02:54.387--ServerSession(1007603019)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
-[EL Config]: metadata: 2018-02-02 23:02:54.39--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.393--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.393--ServerSession(1007603019)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Tema] is being defaulted to: Tema.
-[EL Config]: metadata: 2018-02-02 23:02:54.394--ServerSession(1007603019)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Tema] is being defaulted to: TEMA.
-[EL Config]: metadata: 2018-02-02 23:02:54.4--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.4--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.4--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-02-02 23:02:54.4--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-02-02 23:02:54.4--ServerSession(1007603019)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Postagem] is being defaulted to: Postagem.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Postagem] is being defaulted to: POSTAGEM.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [texto] is being defaulted to: TEXTO.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [titulo] is being defaulted to: TITULO.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-02-02 23:02:54.401--ServerSession(1007603019)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
-[EL Config]: metadata: 2018-02-02 23:02:54.402--ServerSession(1007603019)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
-[EL Config]: metadata: 2018-02-02 23:02:54.402--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
-[EL Config]: metadata: 2018-02-02 23:02:54.402--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.402--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
-[EL Config]: metadata: 2018-02-02 23:02:54.403--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-02-02 23:02:54.403--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-02-02 23:02:54.403--ServerSession(1007603019)--Thread(Thread[main,5,main])--The column name for element [login] is being defaulted to: LOGIN.
-[EL Config]: metadata: 2018-02-02 23:02:54.411--ServerSession(1007603019)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field tema] is being defaulted to: ID.
-[EL Config]: metadata: 2018-02-02 23:02:54.411--ServerSession(1007603019)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [tema] is being defaulted to: TEMA_ID.
-[EL Info]: 2018-02-02 23:02:54.82--ServerSession(1007603019)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
-[EL Fine]: connection: 2018-02-02 23:02:55.07--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
-[EL Config]: connection: 2018-02-02 23:02:55.078--ServerSession(1007603019)--Connection(759099777)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+[EL Fine]: server: 2018-02-02 23:50:57.474--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2018-02-02 23:50:57.593--ServerSession(1333592072)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Model] is set to [FIELD].
+[EL Config]: metadata: 2018-02-02 23:50:57.608--ServerSession(1333592072)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Comentario] is set to [FIELD].
+[EL Config]: metadata: 2018-02-02 23:50:57.611--ServerSession(1333592072)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to one mapping element [field usuario] is being defaulted to: class modelo.Usuario.
+[EL Config]: metadata: 2018-02-02 23:50:57.611--ServerSession(1333592072)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to one mapping element [field postagem] is being defaulted to: class modelo.Postagem.
+[EL Config]: metadata: 2018-02-02 23:50:57.612--ServerSession(1333592072)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Tema] is set to [FIELD].
+[EL Config]: metadata: 2018-02-02 23:50:57.613--ServerSession(1333592072)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Postagem] is set to [FIELD].
+[EL Config]: metadata: 2018-02-02 23:50:57.613--ServerSession(1333592072)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field tema] is being defaulted to: class modelo.Tema.
+[EL Config]: metadata: 2018-02-02 23:50:57.613--ServerSession(1333592072)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field usuario] is being defaulted to: class modelo.Usuario.
+[EL Config]: metadata: 2018-02-02 23:50:57.613--ServerSession(1333592072)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
+[EL Config]: metadata: 2018-02-02 23:50:57.617--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.619--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.619--ServerSession(1333592072)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Comentario] is being defaulted to: Comentario.
+[EL Config]: metadata: 2018-02-02 23:50:57.619--ServerSession(1333592072)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Comentario] is being defaulted to: COMENTARIO.
+[EL Config]: metadata: 2018-02-02 23:50:57.627--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.628--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.628--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.628--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [comentario] is being defaulted to: COMENTARIO.
+[EL Config]: metadata: 2018-02-02 23:50:57.628--ServerSession(1333592072)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Tema] is being defaulted to: Tema.
+[EL Config]: metadata: 2018-02-02 23:50:57.628--ServerSession(1333592072)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Tema] is being defaulted to: TEMA.
+[EL Config]: metadata: 2018-02-02 23:50:57.628--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Postagem] is being defaulted to: Postagem.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Postagem] is being defaulted to: POSTAGEM.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [texto] is being defaulted to: TEXTO.
+[EL Config]: metadata: 2018-02-02 23:50:57.629--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [titulo] is being defaulted to: TITULO.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [updated_at] is being defaulted to: UPDATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.63--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [created_at] is being defaulted to: CREATED_AT.
+[EL Config]: metadata: 2018-02-02 23:50:57.631--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-02-02 23:50:57.631--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.631--ServerSession(1333592072)--Thread(Thread[main,5,main])--The column name for element [login] is being defaulted to: LOGIN.
+[EL Config]: metadata: 2018-02-02 23:50:57.639--ServerSession(1333592072)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field usuario] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.64--ServerSession(1333592072)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [usuario] is being defaulted to: USUARIO_ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.64--ServerSession(1333592072)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field postagem] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.64--ServerSession(1333592072)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [postagem] is being defaulted to: POSTAGEM_ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.64--ServerSession(1333592072)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field tema] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.64--ServerSession(1333592072)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [tema] is being defaulted to: TEMA_ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.641--ServerSession(1333592072)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field usuario] is being defaulted to: ID.
+[EL Config]: metadata: 2018-02-02 23:50:57.641--ServerSession(1333592072)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [usuario] is being defaulted to: USUARIO_ID.
+[EL Info]: 2018-02-02 23:50:58.019--ServerSession(1333592072)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
+[EL Fine]: connection: 2018-02-02 23:50:58.225--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: connection: 2018-02-02 23:50:58.231--ServerSession(1333592072)--Connection(2051562038)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
 	platform=>MySQLPlatform
 	user name=> "root"
 	datasource URL=> "jdbc:mysql://127.0.0.1:3306/teste"
 ))
-[EL Config]: connection: 2018-02-02 23:02:55.085--ServerSession(1007603019)--Connection(1961232715)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://127.0.0.1:3306/teste
+[EL Config]: connection: 2018-02-02 23:50:58.236--ServerSession(1333592072)--Connection(1510535132)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://127.0.0.1:3306/teste
 	User: root@localhost
 	Database: MySQL  Version: 5.7.21-log
 	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )
-[EL Info]: connection: 2018-02-02 23:02:55.128--ServerSession(1007603019)--Thread(Thread[main,5,main])--/file:/C:/Users/Pichau/workspace/Forum/build/classes/_teste login successful
-[EL Fine]: sql: 2018-02-02 23:02:55.148--ServerSession(1007603019)--Connection(1961232715)--Thread(Thread[main,5,main])--CREATE TABLE TEMA (ID INTEGER AUTO_INCREMENT NOT NULL, CREATED_AT DATETIME, NOME VARCHAR(255) NOT NULL UNIQUE, UPDATED_AT DATETIME, PRIMARY KEY (ID))
-[EL Fine]: sql: 2018-02-02 23:02:55.173--ServerSession(1007603019)--Connection(1961232715)--Thread(Thread[main,5,main])--CREATE TABLE POSTAGEM (ID INTEGER AUTO_INCREMENT NOT NULL, CREATED_AT DATETIME, TEXTO VARCHAR(255) NOT NULL, TITULO VARCHAR(255) NOT NULL UNIQUE, UPDATED_AT DATETIME, TEMA_ID INTEGER, PRIMARY KEY (ID))
-[EL Fine]: sql: 2018-02-02 23:02:55.202--ServerSession(1007603019)--Connection(1961232715)--Thread(Thread[main,5,main])--CREATE TABLE USUARIO (ID INTEGER AUTO_INCREMENT NOT NULL, CREATED_AT DATETIME, LOGIN VARCHAR(255) NOT NULL UNIQUE, NOME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, UPDATED_AT DATETIME, PRIMARY KEY (ID))
-[EL Fine]: sql: 2018-02-02 23:02:55.225--ServerSession(1007603019)--Connection(1961232715)--Thread(Thread[main,5,main])--ALTER TABLE POSTAGEM ADD CONSTRAINT FK_POSTAGEM_TEMA_ID FOREIGN KEY (TEMA_ID) REFERENCES TEMA (ID)
-[EL Fine]: sql: 2018-02-02 23:02:55.478--ServerSession(1007603019)--Connection(1961232715)--Thread(Thread[main,5,main])--SELECT ID, CREATED_AT, LOGIN, NOME, PASSWORD, UPDATED_AT FROM USUARIO WHERE (LOGIN = ?)
+[EL Info]: connection: 2018-02-02 23:50:58.271--ServerSession(1333592072)--Thread(Thread[main,5,main])--/file:/C:/Users/Pichau/workspace/Forum/build/classes/_teste login successful
+[EL Fine]: sql: 2018-02-02 23:50:58.472--ServerSession(1333592072)--Connection(1510535132)--Thread(Thread[main,5,main])--SELECT ID, CREATED_AT, LOGIN, NOME, PASSWORD, UPDATED_AT FROM USUARIO WHERE (LOGIN = ?)
 	bind => [juniorpaiva95]
-[EL Fine]: sql: 2018-02-02 23:02:55.486--ClientSession(786728464)--Connection(1961232715)--Thread(Thread[main,5,main])--INSERT INTO USUARIO (CREATED_AT, LOGIN, NOME, PASSWORD, UPDATED_AT) VALUES (?, ?, ?, ?, ?)
-	bind => [2018-02-02 23:02:55.482, juniorpaiva95, Junior, e10adc3949ba59abbe56e057f20f883e, 2018-02-02 23:02:55.482]
-[EL Fine]: sql: 2018-02-02 23:02:55.494--ClientSession(786728464)--Connection(1961232715)--Thread(Thread[main,5,main])--SELECT LAST_INSERT_ID()
+[EL Fine]: sql: 2018-02-02 23:50:58.479--ServerSession(1333592072)--Connection(1510535132)--Thread(Thread[main,5,main])--SELECT ID, CREATED_AT, TEXTO, TITULO, UPDATED_AT, TEMA_ID, USUARIO_ID FROM POSTAGEM WHERE (TITULO = ?)
+	bind => [Titulo 3]
+[EL Fine]: sql: 2018-02-02 23:50:58.482--ServerSession(1333592072)--Connection(1510535132)--Thread(Thread[main,5,main])--SELECT ID, CREATED_AT, NOME, UPDATED_AT FROM TEMA WHERE (NOME = ?)
+	bind => [TEMA 2]
+[EL Fine]: sql: 2018-02-02 23:50:58.485--ClientSession(564766469)--Connection(1510535132)--Thread(Thread[main,5,main])--INSERT INTO POSTAGEM (CREATED_AT, TEXTO, TITULO, UPDATED_AT, TEMA_ID, USUARIO_ID) VALUES (?, ?, ?, ?, ?, ?)
+	bind => [2018-02-02 23:50:58.483, Segundo Post, Titulo 3, 2018-02-02 23:50:58.483, 1, 1]
+[EL Fine]: sql: 2018-02-02 23:50:58.493--ClientSession(564766469)--Connection(1510535132)--Thread(Thread[main,5,main])--SELECT LAST_INSERT_ID()
+[EL Fine]: sql: 2018-02-02 23:50:58.5--ClientSession(380556447)--Connection(1510535132)--Thread(Thread[main,5,main])--INSERT INTO COMENTARIO (COMENTARIO, CREATED_AT, UPDATED_AT, POSTAGEM_ID, USUARIO_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [Comentario 1, 2018-02-02 23:50:58.499, 2018-02-02 23:50:58.499, 2, 1]
+[EL Fine]: sql: 2018-02-02 23:50:58.502--ClientSession(380556447)--Connection(1510535132)--Thread(Thread[main,5,main])--SELECT LAST_INSERT_ID()

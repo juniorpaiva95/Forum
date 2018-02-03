@@ -12,10 +12,25 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Tema extends Model{
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(nullable=false, unique=true)
 	private String nome;
 	
+	public Tema(){}
+	
+	public Tema(String nome) {
+		super();
+		this.nome = nome;
+	}
+
+	private String getNome() {
+		return nome;
+	}
+
+	private void setNome(String nome) {
+		this.nome = nome;
+	}
 }
