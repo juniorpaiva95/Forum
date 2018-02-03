@@ -26,11 +26,11 @@ public class Tema extends Model{
 		this.nome = nome;
 	}
 
-	private String getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	private void setNome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 }

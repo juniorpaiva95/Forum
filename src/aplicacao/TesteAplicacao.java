@@ -23,6 +23,8 @@ public class TesteAplicacao {
 		Fachada.inicializar();
 		try { 
 			System.out.println("Inicializando o sistema");
+			Fachada.cadastrarTema("TEMA 2");
+			Fachada.cadastrarTema("TEMA 1");
 //			Fachada.cadastrarUsuario("Junior","juniorpaiva95","123456");
 //			Usuario u = daousuario.localilzarPeloLogin("juniorpaiva95");
 //			Fachada.cadastrarTema("TEMA 2");

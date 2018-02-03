@@ -1,5 +1,10 @@
 package fachada;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.NoResultException;
+
 import daojpa.*;
 import modelo.*;
 import util.Utilitaries;
@@ -76,6 +81,14 @@ public class Fachada {
 		daocomentario.persistir(c);
 		DAO.efetivar();
 		return c;
+	}
+	
+	public static List<Tema> listarTemas() throws Exception{
+		try {
+			return (List<Tema>) daotema.listar();
+		} catch (NoResultException e) {
+			return null;
+		}
 	}
 	
 	
