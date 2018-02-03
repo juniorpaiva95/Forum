@@ -174,6 +174,21 @@
                             </div>
 
                             <div class="wrapper wrapper-content">
+                            <div class="row">
+                            <div class="col-lg-12">
+                            	<form>
+                            		<div class="form-group">
+                            			<input type="text" class="form-control" placeholder="Consultar por Tema ou Titulo">
+                            		</div>
+                            		<div class="form-group">
+                            			<button type="submit" class="btn btn-primary">Consultar</button>
+                            		</div>
+                            		
+                            		
+                            	</form>
+                            </div>
+                            	
+                            </div>
                               <div class="row">
                                <jsp:useBean id="daoPostagem" class="daojpa.DAOPostagem"/>
                                <% Fachada.inicializar(); %>

@@ -32,6 +32,8 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("userLogged") != null) {
 			session.removeAttribute("userLogged");
+			System.out.println(session.getAttributeNames());
+			session.invalidate();
 		}
 		response.sendRedirect("/Forum/login");
 	}
