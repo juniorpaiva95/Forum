@@ -1,6 +1,9 @@
 package controllers;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -8,14 +11,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.websocket.server.PathParam;
 
+import daojpa.DAOPostagem;
 import fachada.Fachada;
+import modelo.Postagem;
 import modelo.Usuario;
 
 /**
  * Servlet implementation class PostagemServlet
  */
-@WebServlet("/postagem")
+@WebServlet(urlPatterns={"/postagem"})
 public class PostagemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,9 +37,36 @@ public class PostagemServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.sendRedirect("/Forum/template/criar-postagem2.jsp");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("TestServlet says hi<br/>");
+
+		String action = request.getParameter("action");
+		if (action != null) {
+			RequestDispatcher rd = request.getRequestDispatcher("template/visualizar-postagem.jsp");
+			if ("include".equalsIgnoreCase(action)) {
+				rd.include(request, response);
+			} else if ("forward".equalsIgnoreCase(action)) {
+				rd.forward(request, response);
+			}
+		}
+		response.sendRedirect("/Forum/template/forum.jsp");
+		
+//		if(request.getParameter("title") != null) {
+////			RequestDispatcher despachar = request.getRequestDispatcher(request.getRequestURL() + request.getQueryString());
+////			despachar.forward(request, response);
+//			Fachada.inicializar();
+//			DAOPostagem daopostagem = new DAOPostagem();
+//			Postagem p = daopostagem.localilzarPeloTitulo(request.getParameter("title"));
+//			System.out.println("Postagem : " + p.getTitulo());
+//			Fachada.finalizar();
+//			System.out.println(request.getRequestURL() + ""+ p.getId());
+//			response.sendRedirect("/Forum/template/article.html");
+//		}else {
+//			response.sendRedirect("/Forum/template/criar-postagem.jsp");
+//			response.getWriter().append("Served at: ").append(request.getContextPath());
+//		}
 	}
 
 	/**

@@ -91,5 +91,13 @@ public class Fachada {
 		}
 	}
 	
+	public static List<Postagem> listarPostagens() throws Exception{
+		try {
+			return (List<Postagem>) daopostagem.listar();
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+	
 	
 }

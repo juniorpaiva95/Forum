@@ -8,14 +8,14 @@
 
     <title>INSPINIA | Article</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/Forum/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Forum/template/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <!-- Toastr style -->
-    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="/Forum/template/css/plugins/toastr/toastr.min.css" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/Forum/template/css/animate.css" rel="stylesheet">
+    <link href="/Forum/template/css/style.css" rel="stylesheet">
 
 
 
@@ -30,7 +30,7 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="/Forum/template/img/profile_small.jpg" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
@@ -284,7 +284,7 @@
                         <li>
                             <div class="dropdown-messages-box">
                                 <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    <img alt="image" class="img-circle" src="/Forum/template/img/a7.jpg">
                                 </a>
                                 <div class="media-body">
                                     <small class="pull-right">46h ago</small>
@@ -297,7 +297,7 @@
                         <li>
                             <div class="dropdown-messages-box">
                                 <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    <img alt="image" class="img-circle" src="/Forum/template/img/a4.jpg">
                                 </a>
                                 <div class="media-body ">
                                     <small class="pull-right text-navy">5h ago</small>
@@ -310,7 +310,7 @@
                         <li>
                             <div class="dropdown-messages-box">
                                 <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="img/profile.jpg">
+                                    <img alt="image" class="img-circle" src="/Forum/template/img/profile.jpg">
                                 </a>
                                 <div class="media-body ">
                                     <small class="pull-right">23h ago</small>
@@ -461,7 +461,7 @@
                                     <div class="social-feed-box">
                                         <div class="social-avatar">
                                             <a href="" class="pull-left">
-                                                <img alt="image" src="img/a1.jpg">
+                                                <img alt="image" src="/Forum/template/img/a1.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <a href="#">
@@ -481,7 +481,7 @@
                                     <div class="social-feed-box">
                                         <div class="social-avatar">
                                             <a href="" class="pull-left">
-                                                <img alt="image" src="img/a2.jpg">
+                                                <img alt="image" src="/Forum/template/img/a2.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <a href="#">
@@ -503,7 +503,7 @@
                                     <div class="social-feed-box">
                                         <div class="social-avatar">
                                             <a href="" class="pull-left">
-                                                <img alt="image" src="img/a3.jpg">
+                                                <img alt="image" src="/Forum/template/img/a3.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <a href="#">
@@ -524,7 +524,7 @@
                                     <div class="social-feed-box">
                                         <div class="social-avatar">
                                             <a href="" class="pull-left">
-                                                <img alt="image" src="img/a5.jpg">
+                                                <img alt="image" src="/Forum/template/img/a5.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <a href="#">
@@ -570,14 +570,14 @@
 
 
     <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/Forum/template/js/jquery-3.1.1.min.js"></script>
+    <script src="/Forum/template/js/bootstrap.min.js"></script>
+    <script src="/Forum/template/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/Forum/template/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="/Forum/template/js/inspinia.js"></script>
+    <script src="/Forum/template/js/plugins/pace/pace.min.js"></script>
 
 </body>
 

@@ -1,12 +1,15 @@
 package modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Postagem extends Model{
@@ -18,12 +21,16 @@ public class Postagem extends Model{
 	@Column(nullable=false,columnDefinition="LONGTEXT")
 //	@Lob
 	private String texto;
-	
+	@Column(columnDefinition="int")
+	private int views;
 	@ManyToOne
 	private Tema tema;
 	
 	@ManyToOne
 	private Usuario usuario;
+	
+	@OneToMany(mappedBy="postagem")
+	private List<Comentario> comentarios = new ArrayList<Comentario>(); 
 	
 	public Postagem() {}
 	public Postagem(String titulo, String texto, Tema tema, Usuario usuario) {
@@ -33,36 +40,48 @@ public class Postagem extends Model{
 		this.tema = tema;
 		this.usuario = usuario;
 	}
-	private int getId() {
+	public int getId() {
 		return id;
 	}
 
-	private void setId(int id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	private String getTitulo() {
+	public String getTitulo() {
 		return titulo;
 	}
 
-	private void setTitulo(String titulo) {
+	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	private String getTexto() {
+	public String getTexto() {
 		return texto;
 	}
 
-	private void setTexto(String texto) {
+	public void setTexto(String texto) {
 		this.texto = texto;
 	}
 
-	private Tema getTema() {
+	public Tema getTema() {
 		return tema;
 	}
 
-	private void setTema(Tema tema) {
+	public void setTema(Tema tema) {
 		this.tema = tema;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+	public void setComentarios(ArrayList<Comentario> comentarios) {
+		this.comentarios = comentarios;
 	}
 	
 }

@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 			res.addCookie(new Cookie("userLogged", u.getLogin()));
 			Fachada.finalizar();
 			System.out.println("Loguei, vou redirecionar pro forum");
-			res.sendRedirect("template/dashboard_2.jsp");
+			res.sendRedirect("/Forum/postagem");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
