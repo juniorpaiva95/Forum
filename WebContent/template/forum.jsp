@@ -3,6 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="mytag" tagdir="/WEB-INF/tags"%>
 <%@page import="fachada.Fachada"%>
+<%
+	if(session.getAttribute("userLogged")==null)
+	{
+		response.sendRedirect("/Forum/login");
+		
+	}
+%>
 <html>
 
   <head>

@@ -44,18 +44,16 @@ public class RegisterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String nome = req.getParameter("nome");
-		String email = req.getParameter("email");
+		String login = req.getParameter("login");
 		String senha = req.getParameter("senha");
 		HttpSession session = req.getSession(); 
 		try {
 			Fachada.inicializar();
-			Usuario u = Fachada.cadastrarUsuario(nome,email,senha);			
-			if(session.isNew()){
-				session.setAttribute("userLogged", u);
-			}
+			Usuario u = Fachada.cadastrarUsuario(nome,login,senha);			
+			session.setAttribute("userLogged", u);
 			res.addCookie(new Cookie("userLogged", u.getLogin()));
 			Fachada.finalizar();
-			res.sendRedirect("template/dashboard_2.jsp");
+			res.sendRedirect("/Forum/template/forum.jsp");
 		} 
 		catch (Exception e) {
 			System.out.println(e.getMessage());

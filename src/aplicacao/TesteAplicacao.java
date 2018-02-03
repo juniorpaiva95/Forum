@@ -30,10 +30,10 @@ public class TesteAplicacao {
 //				System.out.println(tema.getNome());
 //			}
 //			Fachada.cadastrarUsuario("Junior","juniorpaiva95","123456");
-			Usuario u = daousuario.localilzarPeloLogin("juniorpaiva95");
+//			Usuario u = daousuario.localilzarPeloLogin("juniorpaiva95");
 //			Fachada.cadastrarTema("TEMA 2");
 //			Fachada.cadastrarPostagem("Titulo 3", "Segundo Post", "TEMA 2", u);
-			Postagem p = daopostagem.localilzarPeloId(1);
+			Postagem p = daopostagem.localizarPeloId(1);
 			System.out.println(p.getComentarios().size());
 //			Fachada.cadastrarComentario("Comentario 1", u, 1);
 		} catch (Exception e) {

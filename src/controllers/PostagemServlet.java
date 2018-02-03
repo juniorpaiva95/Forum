@@ -54,6 +54,7 @@ public class PostagemServlet extends HttpServlet {
 				System.out.println("Qtd Views: " + p.getViews());
 				DAO.efetivar();
 				Fachada.finalizar();
+				request.setAttribute("postagem", p);
 				rd.forward(request, response);
 			}else {
 				response.sendRedirect("/Forum/template/forum.jsp");
@@ -67,21 +68,6 @@ public class PostagemServlet extends HttpServlet {
 		}else {
 			response.sendRedirect("/Forum/template/forum.jsp");
 		}
-		
-//		if(request.getParameter("title") != null) {
-////			RequestDispatcher despachar = request.getRequestDispatcher(request.getRequestURL() + request.getQueryString());
-////			despachar.forward(request, response);
-//			Fachada.inicializar();
-//			DAOPostagem daopostagem = new DAOPostagem();
-//			Postagem p = daopostagem.localilzarPeloTitulo(request.getParameter("title"));
-//			System.out.println("Postagem : " + p.getTitulo());
-//			Fachada.finalizar();
-//			System.out.println(request.getRequestURL() + ""+ p.getId());
-//			response.sendRedirect("/Forum/template/article.html");
-//		}else {
-//			response.sendRedirect("/Forum/template/criar-postagem.jsp");
-//			response.getWriter().append("Served at: ").append(request.getContextPath());
-//		}
 	}
 
 	/**

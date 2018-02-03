@@ -25,22 +25,22 @@ public class Comentario  extends Model{
 		this.usuario = usuario;
 		this.postagem = postagem;
 	}
-	private String getComentario() {
+	public String getComentario() {
 		return comentario;
 	}
-	private void setComentario(String comentario) {
+	public void setComentario(String comentario) {
 		this.comentario = comentario;
 	}
-	private Usuario getUsuario() {
+	public Usuario getUsuario() {
 		return usuario;
 	}
-	private void setUsuario(Usuario usuario) {
+	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	private Postagem getPostagem() {
+	public Postagem getPostagem() {
 		return postagem;
 	}
-	private void setPostagem(Postagem postagem) {
+	public void setPostagem(Postagem postagem) {
 		this.postagem = postagem;
 	}
 	

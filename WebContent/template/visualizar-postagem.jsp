@@ -4,7 +4,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="mytag" tagdir="/WEB-INF/tags"%>
 <%@page import="fachada.Fachada"%>
-
+<%
+	if(session.getAttribute("userLogged")==null)
+	{
+		response.sendRedirect("/Forum/login");
+		
+	}
+%>
 <html>
 
   <head>
@@ -157,14 +163,7 @@
                                     <a href="/Forum/">Forum</a>
                                   </li>
                                   <li class="active">
-                                  <jsp:useBean id="daoPostagem" class="daojpa.DAOPostagem"/>
-<%
-	Fachada.inicializar();
-   	String id = request.getParameter("id");
-   	Postagem p = daoPostagem.localizarPeloId(Integer.parseInt(id));
-	Fachada.finalizar();
-%>
-                                    <strong><% out.print(p.getTitulo()); %></strong>
+                                    <strong><c:out value="${ postagem.getTitulo() }"></c:out></strong>
                                   </li>
                                 </ol>
                               </div>
@@ -186,121 +185,51 @@
                                 <button class="btn btn-white btn-xs" type="button">Modern</button>
                             </div>
                             <div class="text-center article-title">
-                            <span class="text-muted"><i class="fa fa-clock-o"></i> <% out.print(Utilitaries.formatarDataEHora(p.getCreated_at())); %></span>
+                            <span class="text-muted"><i class="fa fa-clock-o"></i> <c:out value="${ Utilitaries.formatarDataEHora(postagem.getCreated_at()) }"></c:out></span>
                                 <h1>
-                                    <% out.print(p.getTitulo()); %>
+                                    <c:out value="${ postagem.getTitulo() }"></c:out>
                                 </h1>
                             </div>
                             <p>
-                                <c:out value="${ p.getTexto() }"></c:out>
+                                <c:out value="${ postagem.getTexto() }"></c:out>
                             </p>
                             <hr>
                             <div class="row">
                                 <div class="col-md-6">
                                         <h5>Tema:</h5>
                                         <button class="btn btn-white btn-xs" type="button">
-                                         <% out.print(p.getTema().getNome()); %>
+                                         <c:out value="${ postagem.getTema().getNome() }"></c:out>
                                         </button>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="small text-right">
                                         <h5>Estatisticas:</h5>
-                                        <div> <i class="fa fa-comments-o"> </i> <% out.print(p.getComentarios().size()); %> comments </div>
-                                        <i class="fa fa-eye"> </i> <% out.print(p.getViews()); %> views
+                                        <div> <i class="fa fa-comments-o"> </i> <c:out value="${ postagem.getComentarios().size() }"></c:out> comments </div>
+                                        <i class="fa fa-eye"> </i> <c:out value="${ postagem.getViews() }"></c:out> views
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
+                              <div class="col-lg-12">
+                                <form class="" action="/Forum/comentario" method="post">
+                                  <input type="hidden" name="idpostagem" value="${ postagem.getId() }">
+                                    <div class="form-group">
+                                      <label for="">Escreva seu comentário</label>
+                                      <textarea name="comentario" class="form-control" rows="8" cols="80"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                       <button type="submit" class="btn btn-primary">Comentar</button>
+                                    </div>
+
+                                </form>
+                              </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-lg-12">
 
-                                    <h2>Comments:</h2>
-                                    <div class="social-feed-box">
-                                        <div class="social-avatar">
-                                            <a href="" class="pull-left">
-                                                <img alt="image" src="img/a1.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    Andrew Williams
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="social-feed-box">
-                                        <div class="social-avatar">
-                                            <a href="" class="pull-left">
-                                                <img alt="image" src="img/a2.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    Michael Novek
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="social-feed-box">
-                                        <div class="social-avatar">
-                                            <a href="" class="pull-left">
-                                                <img alt="image" src="img/a3.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    Alice Mediater
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="social-feed-box">
-                                        <div class="social-avatar">
-                                            <a href="" class="pull-left">
-                                                <img alt="image" src="img/a5.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="#">
-                                                    Monica Flex
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-
-
+                                    <h2>Comments: <c:out value="${ postagem.getComentarios().size() }"></c:out></h2>
+                                    <mytag:list-comments comentarios="${ postagem.getComentarios() }"></mytag:list-comments>
                                 </div>
                             </div>
 
