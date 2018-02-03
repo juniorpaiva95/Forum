@@ -23,7 +23,7 @@ public class TesteAplicacao {
 		Fachada.inicializar();
 		try { 
 			System.out.println("Inicializando o sistema");
-			Fachada.cadastrarUsuario("Junior","juniorpaiva3@hotmail.com","123456");
+			Fachada.cadastrarUsuario("Junior","juniorpaiva95","123456");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

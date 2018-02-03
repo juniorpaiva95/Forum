@@ -14,18 +14,28 @@ public class Fachada {
 		DAO.fechar();
 	}
 	
-	public static Usuario cadastrarUsuario(String nome, String email, String senha) 
+	public static Usuario cadastrarUsuario(String nome, String login, String senha) 
 			throws  Exception{
 		DAO.iniciar();
-		Usuario u = daousuario.localilzarPeloEmail(email);
+		Usuario u = daousuario.localilzarPeloLogin(login);
 		if(u != null) {
 			DAO.cancelar();
 			throw new Exception("Usu�rio ja cadastrado: " + nome);
 		}
-		u = new Usuario(email,nome,Utilitaries.makeMd5(senha));
+		u = new Usuario(login,nome,Utilitaries.makeMd5(senha));
 		daousuario.persistir(u);
 		
 		DAO.efetivar();
 		return u;
 	}
+
+	public static Usuario efetuarLogin(String login, String password) throws Exception {
+		
+		DAO.iniciar();
+		Usuario u = daousuario.validateLogin(login, password);
+//		DAO.fechar();
+		return u;
+	}
+	
+	
 }

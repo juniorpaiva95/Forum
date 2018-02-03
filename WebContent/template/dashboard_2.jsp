@@ -1,5 +1,13 @@
 <%@page import="modelo.Usuario"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%
+	if(session.getAttribute("userLogged")==null)
+	{
+		response.sendRedirect("/Forum/login");
+		
+	}
+%>
 <!DOCTYPE html>
 <html>
 
@@ -32,7 +40,9 @@
                             	<strong class="font-bold">
                             		<%
 										Usuario user = (Usuario)session.getAttribute("userLogged");
-										out.print(user.getNome());
+	                            		if(user != null) {
+	                            			out.print(user.getNome());
+	                            		}
 									%>
                             	</strong>
                              </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>

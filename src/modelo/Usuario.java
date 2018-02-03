@@ -8,33 +8,31 @@ import javax.persistence.*;
 public class Usuario extends Model{
 	@Id		
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int iduser;
+	private int id;
 	@Column(nullable=false, unique=true)
-	private String email;
+	private String login;
 	@Column(nullable=false)
 	private String nome;
 	@Column(nullable=false)
-	private String senha;
-	@ManyToOne
-	@JoinColumn(name = "iduser")
-	private ArrayList<Postagem> postagens;
-	@ManyToOne
-	@JoinColumn(name = "iduser")
-	private ArrayList<Comentario> comentarios;
+	private String password;
+
+//	@ManyToOne
+//	@JoinColumn(name = "iduser")
+//	private ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
 	
 	public Usuario() {}
 	
-	public Usuario(String email, String nome, String senha) {
+	public Usuario(String login, String nome, String password) {
 		super();
-		this.email = email;
+		this.login = login;
 		this.nome = nome;
-		this.senha = senha;
+		this.password = password;
 	}
-	public String getEmail() {
-		return email;
+	public String getLogin() {
+		return login;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	public String getNome() {
 		return nome;
@@ -42,11 +40,11 @@ public class Usuario extends Model{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getSenha() {
-		return senha;
+	public String getPassword() {
+		return password;
 	}
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

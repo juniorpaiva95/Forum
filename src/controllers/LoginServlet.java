@@ -6,10 +6,16 @@ import java.lang.ProcessBuilder.Redirect;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpUtils;
+
+import fachada.Fachada;
+import modelo.Usuario;
+import util.Utilitaries;
 
 /**
  * Servlet implementation class LoginServlet
@@ -40,9 +46,25 @@ public class LoginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		String login = req.getParameter("login");
+		String password = req.getParameter("password");
+		HttpSession session = req.getSession();
+		try {
+			Fachada.inicializar();
+			Usuario u = Fachada.efetuarLogin(login, Utilitaries.makeMd5(password));
+			System.out.println("Usuário: " + u);
+			session.setAttribute("userLogged", u);
+			res.addCookie(new Cookie("userLogged", u.getLogin()));
+			Fachada.finalizar();
+			System.out.println("Loguei, vou redirecionar pro forum");
+			res.sendRedirect("template/dashboard_2.jsp");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		
+		Fachada.finalizar();
 	}
 
 }

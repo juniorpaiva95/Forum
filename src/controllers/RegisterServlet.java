@@ -53,7 +53,7 @@ public class RegisterServlet extends HttpServlet {
 			if(session.isNew()){
 				session.setAttribute("userLogged", u);
 			}
-			res.addCookie(new Cookie("userLogged", u.getEmail()));
+			res.addCookie(new Cookie("userLogged", u.getLogin()));
 			Fachada.finalizar();
 			res.sendRedirect("template/dashboard_2.jsp");
 		} 
